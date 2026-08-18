@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Aashriya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sora', sans-serif;
+            background: linear-gradient(135deg, #FFB6D9 0%, #FFC0D9 25%, #FF8BB3 50%, #FF6BA8 75%, #E91E63 100%);
+            min-height: 100vh;
+            color: #3D3D3D;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* CONFETTI */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* FLOATING ROMANTIC ELEMENTS */
+        .floating-element {
+            position: fixed;
+            font-size: 2rem;
+            pointer-events: none;
+            z-index: 5;
+            animation: floatAround 8s ease-in-out infinite;
+            opacity: 0.8;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+        }
+
+        @keyframes floatAround {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) rotate(0deg);
+            }
+            25% { 
+                transform: translateY(-20px) translateX(15px) rotate(10deg);
+            }
+            50% { 
+                transform: translateY(-40px) translateX(-10px) rotate(-5deg);
+            }
+            75% { 
+                transform: translateY(-20px) translateX(20px) rotate(15deg);
+            }
+        }
+
+        /* HEADER */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #E8D4C4;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #C99B7D, #A67B5B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            color: #3D3D3D;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #C99B7D;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #9B6B4F, #C99B7D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            color: #6B6B6B;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            font-size: 1rem;
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #C99B7D, #A67B5B);
+            color: white;
+            box-shadow: 0 6px 20px rgba(201, 155, 125, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(201, 155, 125, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #3D3D3D;
+            border: 2px solid #99735a;
+        }
+
+        .btn-secondary:hover {
+            background: #C99B7D;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 550px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 420px;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #F5D5B8 0%, #E8C4A0 100%);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 2;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+        }
+
+
+        /* POLAROID HERO PHOTO */
+        .polaroid-wrap {
+            position: relative;
+            width: min(390px, 88%);
+            transform: rotate(2deg);
+            transition: transform .35s ease;
+            filter: drop-shadow(0 25px 35px rgba(75, 45, 30, .22));
+        }
+        .polaroid-wrap:hover { transform: rotate(0deg) translateY(-5px); }
+        .polaroid {
+            background: #fffdf9;
+            padding: 14px 14px 58px;
+            border-radius: 2px;
+            box-shadow: 0 10px 25px rgba(55, 35, 25, .20), 0 2px 5px rgba(55, 35, 25, .15);
+            position: relative;
+        }
+        .polaroid::after {
+            content: '♡';
+            position: absolute;
+            bottom: 12px;
+            right: 16px;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            color: #b98770;
+            opacity: .8;
+        }
+        .polaroid img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: center 58%;
+            filter: saturate(.96) contrast(1.02);
+        }
+        .polaroid-caption {
+            position: absolute;
+            left: 16px;
+            bottom: 12px;
+            font-family: 'Sora', sans-serif;
+            font-size: .72rem;
+            letter-spacing: .08em;
+            color: #7a665b;
+        }
+        .cake-topper {
+            position: absolute;
+            z-index: 5;
+            left: 50%;
+            top: -58px;
+            transform: translateX(-50%) rotate(-2deg);
+            font-size: 3.3rem;
+            line-height: 1;
+            filter: drop-shadow(0 6px 5px rgba(75,45,30,.18));
+            pointer-events: none;
+        }
+        .cake-topper::after {
+            content: '♡';
+            position: absolute;
+            top: -17px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            color: #c99b7d;
+        }
+        .present-label {
+            margin-top: 10px;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: .82rem;
+            font-weight: 600;
+            color: #8b6b59;
+            letter-spacing: .04em;
+        }
+
+        /* MUSIC PLAYER */
+        .music-player {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            border: 2px solid #E8D4C4;
+        }
+
+        .music-player audio {
+            flex: 1;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .music-player-label {
+            font-size: 0.9rem;
+            color: #9B8B79;
+            font-weight: 600;
+            min-width: 100px;
+        }
+
+        /* PHOTO GALLERY */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .photo-slot {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #F5D5B8 0%, #E8C4A0 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 3px dashed #D4C4B0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-slot:hover {
+            transform: scale(1.05);
+            border-color: #C99B7D;
+        }
+
+        .photo-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .photo-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* LETTER SECTION */
+        .letter-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #C99B7D;
+        }
+
+        .letter-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #3D3D3D;
+            margin-bottom: 15px;
+        }
+
+        .letter-text {
+            color: #6B6B6B;
+            line-height: 1.8;
+            font-weight: 300;
+            white-space: pre-line;
+        }
+
+        /* VIDEO PLAYER */
+        .video-section {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 2px solid #E8D4C4;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #F5D5B8 0%, #E8C4A0 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 3px dashed #D4C4B0;
+        }
+
+        .video-placeholder:hover {
+            transform: scale(1.02);
+            border-color: #C99B7D;
+        }
+
+        .video-placeholder iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: none;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            border: 2px solid #E8D4C4;
+        }
+
+        .modal-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #9B6B4F, #C99B7D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 14px 18px;
+            font-size: 1rem;
+            border: 2px solid #E0D5CA;
+            border-radius: 10px;
+            font-family: 'Sora', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #C99B7D;
+            box-shadow: 0 0 15px rgba(201, 155, 125, 0.2);
+        }
+
+        .error-text {
+            color: #D9534F;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .success-text {
+            color: #5CB85C;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* PAGE SECTIONS */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+            animation: slideIn 0.4s ease;
+        }
+
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CALENDAR PAGE */
+        .calendar-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #9B6B4F, #C99B7D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .calendar {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            border: 2px solid #E8D4C4;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .calendar-table th {
+            background: linear-gradient(135deg, #F5D5B8, #E8C4A0);
+            padding: 15px;
+            text-align: center;
+            font-weight: 700;
+            color: #3D3D3D;
+            border-radius: 10px;
+        }
+
+        .calendar-table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #E8D4C4;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            color: #3D3D3D;
+        }
+
+        .calendar-table td:hover {
+            background: #FFF5F0;
+            transform: scale(1.05);
+        }
+
+        .calendar-table .special-date {
+            background: linear-gradient(135deg, #C99B7D, #A67B5B);
+            color: white;
+            font-weight: 700;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(201, 155, 125, 0.4);
+            transform: scale(1.1);
+        }
+
+        .date-input-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 2px solid #E8D4C4;
+        }
+
+        .date-input-wrapper p {
+            font-size: 1.1rem;
+            color: #3D3D3D;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* VIDEO PAGE */
+        .video-section-main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .video-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #9B6B4F, #C99B7D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            border: 2px solid #E8D4C4;
+        }
+
+        .video-content-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #F5D5B8 0%, #E8C4A0 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+            border: 3px dashed #D4C4B0;
+        }
+
+        .video-content-placeholder:hover {
+            transform: scale(1.02);
+            border-color: #C99B7D;
+            background: linear-gradient(135deg, #F5E6D3, #E8D4C4);
+        }
+
+        .video-status {
+            background: linear-gradient(135deg, #F5D5B8, #E8C4A0);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 2px solid #D4C4B0;
+        }
+
+        .timer-display {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #9B6B4F, #C99B7D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .timer-text {
+            font-size: 1rem;
+            color: #6B6B6B;
+            font-weight: 500;
+        }
+
+        .puzzle-form {
+            background: linear-gradient(135deg, #F5D5B8 0%, #E8C4A0 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 2px solid #D4C4B0;
+        }
+
+        .puzzle-question {
+            margin-bottom: 25px;
+        }
+
+        .puzzle-label {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #3D3D3D;
+            margin-bottom: 10px;
+        }
+
+        .puzzle-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #D4C4B0;
+            border-radius: 8px;
+            font-family: 'Sora', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: white;
+        }
+
+        .puzzle-input:focus {
+            outline: none;
+            border-color: #C99B7D;
+            box-shadow: 0 0 12px rgba(201, 155, 125, 0.2);
+        }
+
+        .locked-message {
+            text-align: center;
+            padding: 40px 20px;
+            color: #9B8B79;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: #FFF5F0;
+            border-radius: 15px;
+            border: 2px dashed #D4C4B0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* DECORATIVE ELEMENTS */
+        .dots {
+            position: absolute;
+            display: flex;
+            gap: 12px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #C99B7D, #A67B5B);
+            opacity: 0.6;
+        }
+
+        .dots-top-right {
+            top: 30px;
+            right: 40px;
+        }
+
+        .dots-bottom-left {
+            bottom: 30px;
+            left: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-visual {
+                height: 430px;
+            }
+
+            .polaroid-wrap {
+                width: min(330px, 82%);
+            }
+
+            .cake-topper {
+                top: -48px;
+                font-size: 2.7rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+
+            .nav {
+                gap: 15px;
+                font-size: 0.85rem;
+            }
+
+            .calendar-section,
+            .video-section-main {
+                padding: 40px 20px;
+            }
+
+            .modal-content {
+                padding: 40px 25px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+        }
+    
+/* ============================================================
+   AESTHETIC SCRAPBOOK REDESIGN
+   Visual-only layer: keeps the existing website functionality.
+   Inspired by soft scrapbook / sticker / Polaroid aesthetics.
+   ============================================================ */
+
+:root {
+    --paper: #fffaf4;
+    --paper-2: #fff3f5;
+    --ink: #4d4140;
+    --muted: #8d7b78;
+    --pink: #ef9fbb;
+    --pink-dark: #d8799c;
+    --rose: #c96d8e;
+    --cream: #f8e8d8;
+    --brown: #9b765e;
+    --brown-dark: #6f5143;
+    --lavender: #d9c8e8;
+    --shadow: 0 20px 55px rgba(103, 71, 58, .14);
+    --soft-shadow: 0 10px 25px rgba(103, 71, 58, .11);
+}
+
+/* Soft paper background */
+body {
+    font-family: 'Poppins', 'Trebuchet MS', sans-serif !important;
+    color: var(--ink) !important;
+    background:
+        radial-gradient(circle at 8% 12%, rgba(239,159,187,.22) 0 3px, transparent 4px),
+        radial-gradient(circle at 91% 18%, rgba(201,109,142,.16) 0 4px, transparent 5px),
+        radial-gradient(circle at 18% 82%, rgba(217,200,232,.28) 0 4px, transparent 5px),
+        radial-gradient(circle at 82% 88%, rgba(248,232,216,.65) 0 5px, transparent 6px),
+        linear-gradient(135deg, #fff8f1 0%, #fff4f6 45%, #fdf0ed 100%) !important;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: .28;
+    background-image:
+        linear-gradient(rgba(120,90,75,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120,90,75,.025) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+/* Header = scrapbook label */
+header {
+    position: relative;
+    z-index: 20;
+    margin: 18px auto 0;
+    width: min(1180px, calc(100% - 32px));
+    padding: 15px 22px !important;
+    border: 1px solid rgba(111,81,67,.10) !important;
+    border-radius: 18px !important;
+    background: rgba(255,250,244,.88) !important;
+    box-shadow: var(--soft-shadow) !important;
+    backdrop-filter: blur(14px);
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.15rem !important;
+    letter-spacing: .5px !important;
+    color: var(--brown-dark) !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+}
+
+.logo::before {
+    content: "♡ ";
+    color: var(--pink-dark);
+}
+
+.nav-link {
+    color: var(--brown-dark) !important;
+    font-size: .86rem !important;
+    letter-spacing: .5px;
+}
+
+.nav-link:hover::after {
+    background: var(--pink) !important;
+    height: 3px !important;
+    border-radius: 99px;
+}
+
+/* Landing page */
+#landingPage {
+    position: relative;
+    z-index: 2;
+}
+
+.hero {
+    width: min(1180px, calc(100% - 32px));
+    min-height: calc(100vh - 110px);
+    padding: 55px 30px 75px !important;
+    gap: 55px !important;
+}
+
+.hero::before {
+    content: "birthday scrapbook";
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    padding: 6px 13px;
+    border-radius: 5px;
+    background: #f4d4df;
+    color: #805565;
+    font-size: .68rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+    box-shadow: 3px 4px 0 rgba(111,81,67,.08);
+}
+
+.hero-content {
+    position: relative;
+    padding: 48px 42px 42px;
+    background: rgba(255,250,244,.82);
+    border: 1px solid rgba(111,81,67,.09);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transform: rotate(-.5deg);
+}
+
+.hero-content::before {
+    content: "✦";
+    position: absolute;
+    top: 17px;
+    right: 25px;
+    font-size: 1.5rem;
+    color: var(--pink);
+    transform: rotate(12deg);
+}
+
+.hero-content::after {
+    content: "⋆｡°✩";
+    position: absolute;
+    bottom: 17px;
+    right: 24px;
+    color: #c7a5b2;
+    letter-spacing: 5px;
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: clamp(2.7rem, 5vw, 4.8rem) !important;
+    line-height: 1.04 !important;
+    color: var(--brown-dark) !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    margin-bottom: 18px !important;
+    letter-spacing: -2px !important;
+}
+
+.hero-content h1::after {
+    content: " ♡";
+    color: var(--pink);
+    font-size: .55em;
+    vertical-align: middle;
+}
+
+.hero-content p {
+    color: var(--muted) !important;
+    font-size: .98rem !important;
+    line-height: 1.9 !important;
+    max-width: 520px;
+}
+
+/* Music player */
+.music-player {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    gap: 13px;
+    flex-wrap: wrap;
+    margin: 22px 0 26px !important;
+    padding: 13px 15px;
+    border: 1px dashed #d7b4bd;
+    border-radius: 12px;
+    background: rgba(255,244,247,.75) !important;
+    box-shadow: 3px 4px 0 rgba(201,109,142,.07);
+}
+
+.music-player-label {
+    color: var(--rose) !important;
+    font-size: .78rem !important;
+    font-weight: 700;
+    letter-spacing: .4px;
+}
+
+.music-player audio {
+    width: min(100%, 330px);
+    height: 36px;
+    accent-color: var(--pink-dark);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 999px !important;
+    padding: 13px 25px !important;
+    font-size: .9rem !important;
+    letter-spacing: .2px;
+    box-shadow: 0 8px 18px rgba(111,81,67,.12);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #e994b2, #d77b9d) !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) rotate(-1deg);
+    box-shadow: 0 12px 24px rgba(201,109,142,.25);
+}
+
+.btn-secondary {
+    background: #fffaf4 !important;
+    color: var(--brown-dark) !important;
+    border: 1px solid #e4cfc3 !important;
+}
+
+/* Polaroid / photo side */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 520px;
+}
+
+.polaroid-wrap {
+    position: relative;
+    padding: 28px 22px 24px;
+    transform: rotate(2deg);
+}
+
+.polaroid-wrap::before {
+    content: "♡";
+    position: absolute;
+    top: -2px;
+    left: -18px;
+    font-size: 2rem;
+    color: #d884a1;
+    transform: rotate(-18deg);
+}
+
+.polaroid-wrap::after {
+    content: "★";
+    position: absolute;
+    right: -12px;
+    bottom: 45px;
+    font-size: 2rem;
+    color: #e6b75f;
+    transform: rotate(14deg);
+}
+
+.polaroid {
+    position: relative;
+    width: min(355px, 78vw);
+    padding: 13px 13px 58px !important;
+    background: #fff !important;
+    border-radius: 2px !important;
+    box-shadow:
+        0 22px 40px rgba(79,58,49,.20),
+        5px 7px 0 rgba(207,169,153,.18);
+    transform: rotate(-4deg);
+    border: 1px solid #eee2da;
+}
+
+.polaroid::before {
+    content: "";
+    position: absolute;
+    width: 82px;
+    height: 24px;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    background: rgba(246,202,213,.78);
+    box-shadow: 0 2px 4px rgba(90,60,50,.08);
+}
+
+.polaroid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 1px;
+    filter: saturate(.93) contrast(.97) brightness(1.02);
+}
+
+.polaroid-caption {
+    color: #80645b !important;
+    font-family: "Comic Sans MS", "Trebuchet MS", cursive !important;
+    font-size: 1rem !important;
+    letter-spacing: .4px;
+    padding-top: 13px !important;
+}
+
+.cake-topper {
+    position: absolute;
+    z-index: 5;
+    top: -45px !important;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    font-size: 3.2rem !important;
+    filter: drop-shadow(0 7px 7px rgba(85,60,45,.15));
+}
+
+.present-label {
+    display: inline-block;
+    margin-top: 17px;
+    margin-left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    padding: 7px 15px;
+    background: #f6dfb9;
+    color: #806045 !important;
+    border-radius: 4px;
+    font-family: "Comic Sans MS", cursive;
+    font-size: .76rem !important;
+    white-space: nowrap;
+    box-shadow: 3px 4px 0 rgba(111,81,67,.08);
+}
+
+/* Scrapbook dots */
+.dots .dot {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background: #ef9fbb !important;
+    box-shadow: 16px 8px 0 #d9c8e8, 32px -1px 0 #f0c878;
+}
+
+.dots-top-right {
+    right: 7% !important;
+    top: 12% !important;
+}
+
+.dots-bottom-left {
+    left: 7% !important;
+    bottom: 10% !important;
+}
+
+/* All inner pages */
+.page {
+    position: relative;
+    z-index: 2;
+}
+
+.calendar-section,
+.video-section-main {
+    width: min(1000px, calc(100% - 32px)) !important;
+    margin: 42px auto !important;
+    padding: 42px !important;
+    background: rgba(255,250,244,.90) !important;
+    border: 1px solid rgba(111,81,67,.09) !important;
+    border-radius: 10px !important;
+    box-shadow: var(--shadow) !important;
+    position: relative;
+}
+
+.calendar-section::before,
+.video-section-main::before {
+    content: "✦ little memories ✦";
+    position: absolute;
+    top: -13px;
+    left: 30px;
+    padding: 5px 13px;
+    background: #efd1dc;
+    color: #805565;
+    font-size: .68rem;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    transform: rotate(-2deg);
+}
+
+.section-title,
+.video-title {
+    color: var(--brown-dark) !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.section-title::after {
+    content: " ♡";
+    color: var(--pink);
+}
+
+/* Gallery cards */
+.photo-gallery {
+    gap: 17px !important;
+}
+
+.photo-slot {
+    min-height: 155px !important;
+    background: #fff !important;
+    border: 1px solid #eaded7 !important;
+    border-radius: 3px !important;
+    box-shadow: 0 8px 17px rgba(103,71,58,.10) !important;
+    transform: rotate(-1deg);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.photo-slot:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+.photo-slot:hover {
+    transform: translateY(-5px) rotate(0deg) !important;
+    box-shadow: 0 14px 25px rgba(103,71,58,.16) !important;
+}
+
+/* Letter = actual paper */
+.letter-section {
+    background:
+        linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,.75)),
+        repeating-linear-gradient(to bottom, transparent 0 31px, #ead8d2 32px) !important;
+    border: 1px solid #eadbd4 !important;
+    border-left: 5px solid #e7a8ba !important;
+    border-radius: 4px !important;
+    box-shadow: 7px 9px 0 rgba(216,132,161,.08), var(--soft-shadow) !important;
+    transform: rotate(.5deg);
+}
+
+.letter-title {
+    color: var(--rose) !important;
+}
+
+.letter-text {
+    color: #6f5e58 !important;
+}
+
+/* Calendar */
+.calendar {
+    background: #fff !important;
+    border: 1px solid #eaded7 !important;
+    border-radius: 6px !important;
+    box-shadow: var(--soft-shadow) !important;
+}
+
+.calendar-table th {
+    background: #f2d9e2 !important;
+    color: #795363 !important;
+}
+
+.calendar-table td {
+    background: #fffaf7 !important;
+    color: #665852 !important;
+    border-color: #efe3dc !important;
+}
+
+.calendar-table td.special-date {
+    background: #ed9db9 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    font-weight: 700;
+}
+
+/* Date / form area */
+.date-input-wrapper,
+.puzzle-form {
+    background: #fff5f7 !important;
+    border: 1px dashed #d9b8c2 !important;
+    border-radius: 12px !important;
+}
+
+.input-field,
+.puzzle-input {
+    background: #fffdfb !important;
+    border: 1px solid #e4d1ca !important;
+    color: var(--ink) !important;
+    border-radius: 10px !important;
+}
+
+.input-field:focus,
+.puzzle-input:focus {
+    border-color: #d98ca8 !important;
+    box-shadow: 0 0 0 4px rgba(217,140,168,.12) !important;
+}
+
+/* Modals */
+.modal {
+    background: rgba(72,51,47,.35) !important;
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background:
+        radial-gradient(circle at 90% 10%, rgba(239,159,187,.12) 0 5px, transparent 6px),
+        #fffaf5 !important;
+    border: 1px solid #ead9d1 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 30px 70px rgba(62,43,38,.22) !important;
+    transform: rotate(-.5deg);
+}
+
+.modal-content::before {
+    content: "♡";
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    color: #e29ab1;
+    font-size: 1.5rem;
+}
+
+.modal-title {
+    color: var(--brown-dark) !important;
+}
+
+/* Video cards */
+.video-card {
+    background: #fff !important;
+    border: 1px solid #eaded7 !important;
+    border-radius: 5px !important;
+    box-shadow: var(--soft-shadow) !important;
+    transform: rotate(-.5deg);
+}
+
+.video-card:nth-child(even) {
+    transform: rotate(.6deg);
+}
+
+.video-card:hover {
+    transform: translateY(-5px) rotate(0deg) !important;
+    box-shadow: 0 18px 35px rgba(103,71,58,.16) !important;
+}
+
+.video-content-placeholder {
+    background:
+        radial-gradient(circle, rgba(216,132,161,.20) 0 2px, transparent 3px),
+        #fff3f6 !important;
+}
+
+.video-title {
+    color: var(--brown-dark) !important;
+}
+
+.video-status,
+.locked-message {
+    color: var(--muted) !important;
+}
+
+/* Confetti becomes tiny scrapbook stickers */
+.confetti {
+    border-radius: 2px;
+    opacity: .65;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    header {
+        margin-top: 10px;
+        width: calc(100% - 20px);
+    }
+
+    .hero {
+        grid-template-columns: 1fr !important;
+        padding: 55px 10px 65px !important;
+    }
+
+    .hero-content {
+        padding: 38px 25px 32px;
+    }
+
+    .hero-visual {
+        min-height: 430px;
+    }
+
+    .calendar-section,
+    .video-section-main {
+        width: calc(100% - 20px) !important;
+        padding: 28px 18px !important;
+    }
+
+    .polaroid {
+        width: min(310px, 82vw);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.7rem !important;
+    }
+
+    .music-player {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .music-player audio {
+        width: 100%;
+    }
+
+    .nav {
+        gap: 12px !important;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">✨ Birthday</div>
+        <nav class="nav">
+            <a href="#" class="nav-link">Home</a>
+        </nav>
+    </header>
+
+    <!-- FLOATING DECORATIONS -->
+    <div id="capybaraContainer"></div>
+    <div aria-hidden="true" style="position:fixed;left:18px;bottom:15px;z-index:3;font-size:18px;opacity:.55;pointer-events:none;">✿</div>
+    <div aria-hidden="true" style="position:fixed;right:20px;bottom:14px;z-index:3;font-size:17px;opacity:.5;pointer-events:none;">♡</div>
+
+    <!-- LANDING PAGE -->
+    <div id="landingPage" class="page active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Happy Birthday!</h1>
+                <p>This special day celebrates you and all the amazing ways you've made the world a better place. Your kindness, creativity, and strength inspire everyone around you.</p>
+                
+                <!-- MUSIC PLAYER FOR LANDING PAGE -->
+                <div class="music-player">
+                    <span class="music-player-label">🎵 Eyedress:</span>
+                    <audio controls>
+                        <!-- CUSTOMIZE: Replace with your song URL -->
+                        <source src="Eyedress - She looks just like a dream (Something About You) (Lyrics) ft. Dent May.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showPasswordModal()">🎁 Unlock Birthday Present</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="polaroid-wrap">
+                    <div class="cake-topper" aria-hidden="true">🎂</div>
+                    <div class="polaroid">
+                        <img src="ashmpic1.png" alt="A special birthday photo">
+                        <div class="polaroid-caption">a little memory ♡</div>
+                    </div>
+                    <div class="present-label">made especially for you</div>
+                </div>
+            </div>
+        </div>
+        <div class="dots dots-top-right">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="dots dots-bottom-left">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- PASSWORD MODAL -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <h2 class="modal-title">Enter Password</h2>
+            <div class="input-group">
+                <input type="password" class="input-field" id="passwordInput" placeholder="Password...">
+                <div class="error-text" id="passwordError"></div>
+            </div>
+            <button class="btn btn-primary" onclick="verifyPassword()" style="width: 100%;">Continue</button>
+        </div>
+    </div>
+
+    <!-- CALENDAR PAGE -->
+    <div id="calendarPage" class="page">
+        <div class="calendar-section">
+            <h2 class="section-title">When was the special moment?</h2>
+            
+            <!-- MUSIC PLAYER FOR CALENDAR PAGE -->
+            <div class="music-player" style="margin-bottom: 30px;">
+                <span class="music-player-label">🎵 Song:</span>
+                <audio controls>
+                    <!-- CUSTOMIZE: Replace with your song URL -->
+                    <source src="Mac DeMarco  No Other Heart (Official Audio).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!-- PHOTO GALLERY FOR CALENDAR PAGE -->
+            <h3 style="font-size: 1.2rem; color: #3D3D3D; margin-bottom: 15px; font-weight: 600;">Photos:</h3>
+            <div class="photo-gallery">
+                <!-- CUSTOMIZE: Add up to 6 photos here -->
+                <div class="photo-slot">
+                    <img src="ashpic2.jpg" alt="2">
+            <div class="polaroid-caption"> ♡</div>
+                </div>
+                <div class="photo-slot">
+                    <img src="ashpic3.jpg" alt="3">
+            <div class="polaroid-caption"> ♡</div>
+                </div>
+                <div class="photo-slot">
+                    <img src="ashpic4.jpg" alt="4">
+            <div class="polaroid-caption"> ♡</div>
+                </div>
+                <div class="photo-slot">
+                    <img src="ashpic5.jpg" alt="5">
+            <div class="polaroid-caption"> ♡</div>
+                </div>
+                <div class="photo-slot">
+                   <img src="ashpic6.jpg" alt="6">
+            <div class="polaroid-caption"> ♡</div>
+                </div>
+                <div class="photo-slot">
+                    <img src="ashpic7.jpg" alt="7">
+            <div class="polaroid-caption"> ♡</div>
+                </div>
+            </div>
+
+            <!-- LETTER SECTION -->
+            <div class="letter-section">
+                <div class="letter-title">💌 A Letter to You</div>
+                <div class="letter-text">
+<!-- CUSTOMIZE: Write your letter here -->
+Dear beautiful soul,
+
+Today is all about celebrating YOU. Every moment with you is special, and we're so grateful for everything you bring to our lives.
+
+Thank you for being you.
+
+With love,
+Your Friends
+                </div>
+            </div>
+            
+            <div class="calendar">
+                <h3 style="text-align: center; margin-bottom: 25px; font-size: 1.3rem; color: #3D3D3D;">September 2010</h3>
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendarBody"></tbody>
+                </table>
+            </div>
+
+            <div class="date-input-wrapper">
+                <p>Confirm the special date:</p>
+                <input type="date" class="input-field" id="dateInput">
+                <button class="btn btn-primary" onclick="verifyDate()" style="width: 100%; max-width: 250px; margin-top: 15px;">Confirm</button>
+                <div class="error-text" id="dateError"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEO PAGES CONTAINER -->
+    <div id="videoPagesContainer"></div>
+
+    <!-- PUZZLE MODAL -->
+    <div class="modal" id="puzzleModal">
+        <div class="modal-content">
+            <h2 class="modal-title" id="puzzleTitle">Answer the Questions</h2>
+            <div id="puzzleContainer"></div>
+            <button class="btn btn-primary" onclick="submitPuzzle()" style="width: 100%;">Submit</button>
+            <div class="error-text" id="puzzleError"></div>
+        </div>
+    </div>
+
+    <script>
+        // ═══════════════════════════════════════════════════════════
+        // CUSTOMIZATION SECTION - EDIT THESE VALUES
+        // ═══════════════════════════════════════════════════════════
+
+        const PASSWORD = "happybirthday"; // Change to your desired password
+        const SPECIAL_DATE = "2010-09-03"; // Format: YYYY-MM-DD
+        const NUM_VIDEOS = 16; // Number of video messages
+        const PUZZLE_FRIENDS = ["Sampada", "Aryan", "Sukhi"]; // Only these friends have puzzles
+
+        // Friend names and songs for each video page
+        const FRIENDS = [
+            {
+                name: "Sampada",
+                song: "BTS (방탄소년단) 'Dynamite' Official MV.mp3",
+                video: "samsamvideo.mp4",
+                photos: ["samsam1.jpeg", "samsam2.jpeg", "samsam3.jpeg"],
+                letter: `Dear Kishu,
+
+Kisu, you are poop and I like that the most about you. You haven't been able to piss me off yet and maybe that's because of how similar we are.   You are the GOAT. And I hope you slay this year too like always. And carve it in your brain that I will always be here for you no matter what. HAPPY BIRTHDAYYYYY AYYY BADDIEE.
+          
+
+Happy Birthday!
+
+With love,
+~Your fav Samsamthegangster.`
+            },
+            {
+                name: "Aryan",
+                song: "The Police - Every Breath You Take (Visualiser).mp3",
+                video: "aashuaraynvideo.mov",
+                photos: ["a1.jpg", "meandash'.jpeg"],
+                letter: `Dear Aashriya,
+
+Happiest Birthday Kishuriyaaaa. you are the the most helpful and godblessed person I have in my life, I wish you the happist birthdayyyyy have an amazing day.
+
+Happy Birthday!
+
+With love,
+Aryan`
+            },
+            {
+                name: "Sukhi",
+                song: "Billie Eilish - BIRDS OF A FEATHER.mp3",
+                video: "sukhib.mp4",
+                photos: ["sukhi1.jpeg", "sukhi2.jpeg", "sukhi3.jpeg"],
+                letter: `Dear Aashriya,
+
+Hii aashriya, i just want to let you know how much i appreciate you for always being there for me. Although we had some ups and downs, you've never failed to make me feel loved for and cared for and thank you for always being there to listen to my stupid rants. You'll always mean so much to me. I've enjoyed every moment we've shared and i cant wait to spend more days with you. You are an amazing person inside and out, and truly deserve all the happiness you get. I hope sixteen brings you more fun, love and unforgettable memories and I hope i will be a part of them. Never forget how much you mean to everyone around you and how much we all love you.
+
+Happy Birthday!
+
+With Love,
+Sukhi`
+            },
+            {
+                name: "Bella",
+                song: "PATH_TO_SONG_4.mp3",
+                video: "bellab.mp4",
+                
+                letter: `Dear Aashriya,
+
+Happy 16th Birthday, Aashriya! 🎂💗
+
+Dear Aashriya,
+
+Happy 16th birthday!! 🥳💗 I hope you have the most amazing day ever because you genuinely deserve it. I’m so grateful to have you as my friend and you are genuinely one of the sweetest girl everrrrr. 😛✌️School with you has been so much fun and I hope we continue creating such wonderful memoriessssss. You are so flippin gorgeous and kind and sweet and just super fun to be around . I HOPE YOU HAVE A GREAT YEAR AND SUPER DUPER HAPPY BIRTHDAY BABYYYY 🎂🎂🎂🎂
+
+Happy Birthday!
+
+With love,
+Bella`
+            },
+            {
+                name: "Aryana",
+                song: "PATH_TO_SONG_5.mp3",
+                video: "aryanab.mp4",
+                photos: ["aryanapic1.png", "aryanapic2.jpg"],
+                letter: `Dear Aashriya,
+
+
+
+Happy Birthday!
+
+With love,
+Aryana`
+            },
+            {
+                name: "Grand-dad",
+                song: "PATH_TO_SONG_6.mp3",
+                video: "aashgranddad.mp4",
+                
+                letter: `Dear Aashriya,
+
+Janma din ko dherai subhakamana natini.
+
+Happy Birthday!
+
+With love,
+Grand dad`
+            },
+            {
+                name: "Grand-mom",
+                song: "PATH_TO_SONG_7.mp3",
+                video: "aashgrandmom.mp4",
+                
+                letter: `Dear Aashriya,
+
+Kishu timi lai janma din ko dherai dherai subhakana
+
+Happy Birthday!
+
+With love,
+Grand Mom`
+            },
+            {
+                name: "Anushree",
+                song: "PATH_TO_SONG_8.mp3",
+                video: "anushreebbbb.mov",
+                
+                letter: `Dear Aashriya,
+
+
+Happy Birthday sister!
+
+With love,
+Your fav sister, Anu`
+            },
+            {
+                name: "Aadu",
+                song: "PATH_TO_SONG_9.mp3",
+                video: "aadub.mov",
+                
+                letter: `Dear Aashriya,
+
+
+
+Happy Birthday didi!
+
+With love,
+Your fav bhai Aadu`
+            },
+            {
+                name: "MOM",
+                song: "PATH_TO_SONG_10.mp3",
+                video: "aashumom.mp4",
+                
+                letter: `Dear Aashriya,
+
+
+
+Happy Birthday!
+
+With love,
+MOM`
+            },
+            {
+                name: "Aunty(Aadu MOM)",
+                song: "PATH_TO_SONG_11.mp3",
+                video: "ashuaunty.mp4",
+                
+                letter: `Dear Aashriya,
+
+
+
+Happy Birthday!
+
+With love,
+Aunty`
+            },
+            {
+                name: "Aarohan",
+                song: "Billie Eilish - BIRDS OF A FEATHER.mp3",
+                video: "aarohonb.mp4",
+              
+                letter: `Dear Aashriya,
+
+Happy Birthday, you are always very helpful in exams thank you have a nice day
+
+Happy Birthday!
+
+With best wishes,
+Aarohan`
+            },
+            {
+                name: "Riva",
+               
+                video: "rivab.mp4",
+                photos: ["rivapic1.jpeg", "rivapic3.jpeg", "rivapic4.jpeg"],
+                letter: `Dear Aashriya,
+
+Happiest birthday to the girl I’m so incredibly lucky to call my sister.
+
+I could never find the right words to explain how grateful I am to have you in my life. Through every laugh that left us crying, every hard day, every memory we’ve made together, you’ve always been my safe place.Thank you for always standing by me, protecting me, and loving me even when life wasn’t easy for you.You’ve helped shape the person I am today without even realizing it. You deserve every beautiful thing this world has to offer, and I’ll forever be grateful that I get to go through life with a sister like you. Thank you so so so much for everything words cant describe how lucky i am to have such a talented sister like you and i hope you achieve everything you want in life. I love you more than words could ever describe <33
+
+Happy Birthday!
+
+With love,
+Riva`
+            },
+            {
+                name: "Akshata",
+                song: "GROUPLOVE - Tongue Tied Take Me To Your Best Friend's House  Lyrics.mp3",
+                video: "akvideo.mp4",
+                photos: ["ak1.jpeg", "ak2.jpeg", "ak3.jpeg"],
+                letter: `Dear Aashriya,
+
+HAPPY BIRTHDAY KISHSUSSHHSUSHSHSUSUS OLAY BOY 10 YEARS AND MROE OF BEING FRIENDS I love you soso much and I always will no matter what we’re gonna be together even though you love Suzasni more it’s okay life is life whatever anyways me and UNNAV will always remember you as a very very very amazing friend who’s there supporting us no matter what and NO YOUR TIKTOKS ARENT FUNNY anyways expected  CUASE ABA kws effect TSKKKK BE MORE SOCIAL AND TLAK TK EVERYONE SND GET ASTARA BYE I LOVE YOU HAPPY 16 BIRTHDYA KISHSUSUSUUUUUU
+
+Happy Birthday!
+
+With love,
+Your Aku`
+            },
+            {
+                name: "Aabha",
+                song: "Cigarettes After Sex - Sunsetz (Lyrics).mp3",
+                video: "39d5b985f2a94a6f83ce87ebc9cde504.mov",
+                photos: ["aab1.jpg", "aab3.jpg", "ab2.jpg"],
+                letter: `Dear Aashriya,
+
+Hi my Assriya, I would like to start my note by saying how much I love you and how much you mean to me. Ik we had our own downfall but I’m so happy we overcame it and came back even stronger. I’ll forever cherish our friendship and all the laughter we have shared. I forever wish to be by your side as your best friend. Happiest birthday. Till death do us apart 😘😘
+
+Happy Birthday!
+
+With love,
+Aabha`
+            },
+            {
+                name: "Aryan's mom",
+               
+                video: "auntymom.mp4",
+
+                letter: `Dear Aashriya,
+
+Happy birthday nani I love you very much keep moving forward in life and show everyone how stong you are.
+
+Happy Birthday!
+
+With love,
+Ajita Aunty`
+            }
+        ];
+
+        // EDIT THESE PUZZLE QUESTIONS
+        const PUZZLE_QUESTIONS = Array.from({ length: NUM_VIDEOS }, () => ({
+            q1: "Question 1: When was the first time I came to your house?",
+            q2: "Question 2: Who am I to you",
+            q3: "Question 3: What's my favorite animal?"
+        }));
+
+        PUZZLE_QUESTIONS[FRIENDS.findIndex(f => f.name === "Sampada")] = {
+            q1: "Question 1: When was the first time I came to your house?",
+            q2: "Question 2: Who am I to you?",
+            q3: "Question 3: What's my favorite animal"
+        };
+
+        PUZZLE_QUESTIONS[FRIENDS.findIndex(f => f.name === "Aryan")] = {
+            q1: "Question 1: When is my other name?",
+            q2: "Question 2: What's her favorite number?",
+            q3: "Question 3: Who is my favourite person?"
+        };
+
+        PUZZLE_QUESTIONS[FRIENDS.findIndex(f => f.name === "Sukhi")] = {
+            q1: "Question 1: What's her favorite color?",
+            q2: "Question 2: What's her favorite number?",
+            q3: "Question 3: What's her favorite animal?"
+        };
+
+        // Puzzle answers for each video (CUSTOMIZE THESE)
+        const PUZZLE_ANSWERS = Array.from({ length: NUM_VIDEOS }, () => ({
+            q1: "EDIT",
+            q2: "EDIT",
+            q3: "EDIT"
+        }));
+
+        // EDIT SAMPADA'S ANSWERS
+        Object.assign(PUZZLE_ANSWERS[FRIENDS.findIndex(f => f.name === "Sampada")], {
+            q1: "2class", q2: "aunty", q3: "snake"
+        });
+
+        // EDIT ARYAN'S ANSWERS
+        Object.assign(PUZZLE_ANSWERS[FRIENDS.findIndex(f => f.name === "Aryan")], {
+            q1: "gaurav", q2: "6", q3: "aashriya"
+        });
+
+        // EDIT SUKHI'S ANSWERS
+        Object.assign(PUZZLE_ANSWERS[FRIENDS.findIndex(f => f.name === "Sukhi")], {
+            q1: "green", q2: "5", q3: "dog"
+        });
+
+        // ═══════════════════════════════════════════════════════════
+        // END CUSTOMIZATION SECTION
+        // ═══════════════════════════════════════════════════════════
+
+        // FLOATING CAPYBARAS AND CONFETTI
+        function createFloatingCapybaras() {
+            const container = document.getElementById('capybaraContainer');
+            const capybaraCount = 3; // Small number for subtlety
+            
+            for (let i = 0; i < capybaraCount; i++) {
+                const capybara = document.createElement('div');
+                capybara.className = 'floating-capybara';
+                capybara.textContent = '';
+                capybara.style.left = Math.random() * 100 + '%';
+                capybara.style.top = Math.random() * 80 + '%';
+                capybara.style.animationDelay = (Math.random() * 2) + 's';
+                container.appendChild(capybara);
+            }
+        }
+
+        function createConfetti() {
+            const canvas = document.createElement('div');
+            for (let i = 0; i < 20; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.top = -10 + 'px';
+                confetti.style.background = ['#C99B7D', '#E8D4C4', '#F5D5B8', '#A67B5B'][Math.floor(Math.random() * 4)];
+                confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                confetti.style.animation = `fall ${Math.random() * 2 + 2}s linear infinite`;
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => confetti.remove(), 4000);
+            }
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(720deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // CALENDAR INITIALIZATION
+        function initializeCalendar() {
+            const calendarBody = document.getElementById('calendarBody');
+            calendarBody.innerHTML = '';
+
+            const firstDay = new Date(2010, 8, 1).getDay();
+            const daysInMonth = 30;
+
+            let date = 1;
+            for (let i = 0; i < 6; i++) {
+                const row = document.createElement('tr');
+                for (let j = 0; j < 7; j++) {
+                    const cell = document.createElement('td');
+                    if (i === 0 && j < firstDay) {
+                        cell.textContent = '';
+                    } else if (date > daysInMonth) {
+                        cell.textContent = '';
+                    } else {
+                        cell.textContent = date;
+                        if (date === 3) {
+                            cell.classList.add('special-date');
+                        }
+                        date++;
+                    }
+                    row.appendChild(cell);
+                }
+                calendarBody.appendChild(row);
+            }
+        }
+
+        // PASSWORD VERIFICATION
+        function showPasswordModal() {
+            document.getElementById('passwordModal').classList.add('active');
+            document.getElementById('passwordInput').focus();
+        }
+
+        function verifyPassword() {
+            const input = document.getElementById('passwordInput').value;
+            const errorDiv = document.getElementById('passwordError');
+
+            if (input === PASSWORD) {
+                document.getElementById('passwordModal').classList.remove('active');
+                switchPage('calendarPage');
+                initializeCalendar();
+                createConfetti();
+            } else {
+                errorDiv.textContent = 'Incorrect password. Try again!';
+            }
+        }
+
+        // DATE VERIFICATION
+        function verifyDate() {
+            const input = document.getElementById('dateInput').value;
+            const errorDiv = document.getElementById('dateError');
+
+            if (input === SPECIAL_DATE) {
+                switchPage('videoPage1');
+                initializeVideoPage(1);
+                createConfetti();
+            } else {
+                errorDiv.textContent = 'Not quite right. Try September 3rd, 2010.';
+            }
+        }
+
+        // VIDEO PAGES SETUP
+        function initializeVideoPages() {
+            const container = document.getElementById('videoPagesContainer');
+            
+            for (let i = 1; i <= NUM_VIDEOS; i++) {
+                const videoPage = document.createElement('div');
+                videoPage.id = `videoPage${i}`;
+                videoPage.className = 'page';
+                
+                const friendData = FRIENDS[i - 1] || { name: `Friend ${i}`, song: 'PATH_TO_SONG.mp3' };
+                
+                videoPage.innerHTML = `
+                    <div class="video-section-main">
+                        <h2 class="video-title">${friendData.name}'s Birthday Wish</h2>
+                        
+                        <!-- MUSIC PLAYER FOR THIS VIDEO PAGE -->
+                        <div class="music-player" style="margin-bottom: 30px;">
+                            <span class="music-player-label">🎵 Song:</span>
+                            <audio controls>
+                                <source src="${friendData.song}" type="audio/mpeg">
+                            </audio>
+                        </div>
+
+                        <!-- PHOTO GALLERY -->
+                        <h3 style="font-size: 1.1rem; color: #3D3D3D; margin-bottom: 15px; font-weight: 600;">Photos:</h3>
+                        <div class="photo-gallery">
+                            ${(friendData.photos || []).map((photo, index) => `
+                                <div class="photo-slot">
+                                    <img src="${photo}" alt="${friendData.name} photo ${index + 1}">
+                                    <div class="photo-label">Photo ${index + 1}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <!-- LETTER SECTION -->
+                        <div class="letter-section">
+                            <div class="letter-title">💌 ${friendData.name}'s Message</div>
+                            <div class="letter-text">${friendData.letter || `Dear Aashriya,
+
+Write ${friendData.name}'s personal letter here.
+
+Happy Birthday!
+
+With love,
+${friendData.name}`}</div>
+                        </div>
+
+                        <div class="video-card">
+                            <div id="video-status-${i}" class="video-status" style="display: none;">
+                                <div class="timer-display" id="timer-${i}"></div>
+                                <div class="timer-text">Next video unlocks in 24 hours!</div>
+                            </div>
+
+                            <div id="video-content-${i}">
+                                <div class="video-content-placeholder" onclick="markVideoWatched(${i})">🎬</div>
+                                <p style="text-align: center; color: #999; font-size: 0.95rem;">Click to watch video (or embed video link)</p>
+                            </div>
+
+                            ${PUZZLE_FRIENDS.includes(friendData.name) ? `
+                            ${["Sampada", "Aryan", "Sukhi"].includes(friendData.name) ? `
+                            <div id="puzzle-section-${i}" style="display: none;">
+                                <div class="puzzle-form">
+                                    <div class="puzzle-question">
+                                        <label class="puzzle-label">${PUZZLE_QUESTIONS[i - 1].q1}</label>
+                                        <input type="text" class="puzzle-input" id="puzzle-1-${i}" placeholder="Your answer...">
+                                    </div>
+                                    <div class="puzzle-question">
+                                        <label class="puzzle-label">${PUZZLE_QUESTIONS[i - 1].q2}</label>
+                                        <input type="text" class="puzzle-input" id="puzzle-2-${i}" placeholder="Your answer...">
+                                    </div>
+                                    <div class="puzzle-question">
+                                        <label class="puzzle-label">${PUZZLE_QUESTIONS[i - 1].q3}</label>
+                                        <input type="text" class="puzzle-input" id="puzzle-3-${i}" placeholder="Your answer...">
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" onclick="submitVideoPointPuzzle(${i})" style="width: 100%;">Check Answers</button>
+                                <div class="error-text" id="puzzle-error-${i}"></div>
+                            </div>` : ""}` : ''}
+                        </div>
+
+                        <div class="nav-buttons">
+                            ${i > 1 ? `<button class="btn btn-secondary" onclick="switchVideoPage(${i - 1})">← Previous</button>` : ''}
+                            ${i < NUM_VIDEOS ? `<button class="btn btn-primary" id="next-btn-${i}" onclick="switchVideoPage(${i + 1})" style="display: none;">Next →</button>` : ''}
+                            <button class="btn btn-secondary" onclick="goHome()">Back to Start</button>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(videoPage);
+            }
+        }
+
+        function initializeVideoPage(pageNum) {
+            const videoWatchTime = localStorage.getItem(`video-${pageNum}-watched`);
+            const canUnlockNext = localStorage.getItem(`video-${pageNum}-unlocked`);
+
+            if (videoWatchTime) {
+                const status = document.getElementById(`video-status-${pageNum}`);
+                status.style.display = 'block';
+                updateVideoTimer(pageNum);
+                setInterval(() => updateVideoTimer(pageNum), 1000);
+            } else if (pageNum === 1 || canUnlockNext) {
+                showVideoContent(pageNum);
+            } else {
+                showLockedMessage(pageNum);
+            }
+        }
+
+        function showVideoContent(pageNum) {
+            const videoContent = document.getElementById(`video-content-${pageNum}`);
+            if (videoContent) {
+                const friendData = FRIENDS[pageNum - 1] || {};
+                videoContent.innerHTML = friendData.video ? `
+                    <video controls playsinline preload="metadata"
+                           style="width:100%; aspect-ratio:16/9; border-radius:15px; background:#000;"
+                           onended="markVideoWatched(${pageNum})">
+                        <source src="${friendData.video}" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                    <p style="text-align:center; color:#999; font-size:.95rem;">
+                        Watch the video to start the 5-second countdown.
+                    </p>
+                ` : `
+                    <div class="video-content-placeholder" onclick="markVideoWatched(${pageNum})">🎬</div>
+                    <p style="text-align: center; color: #999; font-size: 0.95rem;">Video coming soon</p>
+                `;
+            }
+        }
+
+        function showLockedMessage(pageNum) {
+            const videoContent = document.getElementById(`video-content-${pageNum}`);
+            if (videoContent) {
+                videoContent.innerHTML = `<div class="locked-message">🔒 This message is locked. Complete the previous messages first.</div>`;
+            }
+        }
+
+        function markVideoWatched(pageNum) {
+            localStorage.setItem(`video-${pageNum}-watched`, Date.now().toString());
+            initializeVideoPage(pageNum);
+        }
+
+        function updateVideoTimer(pageNum) {
+            const watchTime = parseInt(localStorage.getItem(`video-${pageNum}-watched`));
+            const elapsed = Date.now() - watchTime;
+            const remaining = (24 * 60 * 60 * 1000) - elapsed;
+
+            if (remaining <= 0) {
+                localStorage.removeItem(`video-${pageNum}-watched`);
+                document.getElementById(`video-status-${pageNum}`).style.display = 'none';
+
+                const friendData = FRIENDS[pageNum - 1] || {};
+                if (PUZZLE_FRIENDS.includes(friendData.name)) {
+                    const friendName = (FRIENDS[pageNum - 1] || {}).name;
+                const needsPuzzle = ["Sampada", "Aryan", "Sukhi"].includes(friendName);
+
+                if (needsPuzzle) {
+                    document.getElementById(`puzzle-section-${pageNum}`).style.display = 'block';
+                } else if (pageNum < NUM_VIDEOS) {
+                    localStorage.setItem(`video-${pageNum + 1}-unlocked`, 'true');
+                    const nextBtn = document.getElementById(`next-btn-${pageNum}`);
+                    if (nextBtn) nextBtn.style.display = 'inline-block';
+                }
+                } else if (pageNum < NUM_VIDEOS) {
+                    localStorage.setItem(`video-${pageNum + 1}-unlocked`, 'true');
+                    document.getElementById(`next-btn-${pageNum}`).style.display = 'inline-block';
+                }
+            } else {
+                const totalSeconds = Math.ceil(remaining / 1000);
+                const days = Math.floor(totalSeconds / 86400);
+                const hours = Math.floor((totalSeconds % 86400) / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = totalSeconds % 60;
+
+                document.getElementById(`timer-${pageNum}`).textContent =
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+        }
+
+        function submitVideoPointPuzzle(pageNum) {
+            const q1 = document.getElementById(`puzzle-1-${pageNum}`).value.toLowerCase().trim();
+            const q2 = document.getElementById(`puzzle-2-${pageNum}`).value.trim();
+            const q3 = document.getElementById(`puzzle-3-${pageNum}`).value.toLowerCase().trim();
+            const errorDiv = document.getElementById(`puzzle-error-${pageNum}`);
+
+            const correctAnswers = PUZZLE_ANSWERS[pageNum - 1];
+
+            if (q1 === correctAnswers.q1 && q2 === correctAnswers.q2 && q3 === correctAnswers.q3) {
+                if (pageNum < NUM_VIDEOS) {
+                    localStorage.setItem(`video-${pageNum + 1}-unlocked`, 'true');
+                    document.getElementById(`next-btn-${pageNum}`).style.display = 'inline-block';
+                    errorDiv.textContent = '✓ Correct! Click Next to continue.';
+                    errorDiv.className = 'success-text';
+                    createConfetti();
+                } else {
+                    errorDiv.textContent = '🎉 You completed all birthday messages!';
+                    errorDiv.className = 'success-text';
+                    createConfetti();
+                }
+            } else {
+                errorDiv.textContent = 'Not quite right. Try again!';
+                errorDiv.className = 'error-text';
+            }
+        }
+
+        function switchPage(pageName) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(pageName).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function switchVideoPage(pageNum) {
+            switchPage(`videoPage${pageNum}`);
+            initializeVideoPage(pageNum);
+        }
+
+        function goHome() {
+            switchPage('landingPage');
+        }
+
+        // INITIALIZE ON LOAD
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingCapybaras();
+            initializeVideoPages();
+            document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') verifyPassword();
+            });
+        });
+    </script>
+</body>
+</html>
